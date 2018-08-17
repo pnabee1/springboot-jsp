@@ -1,0 +1,17 @@
+---
+
+applications:
+
+- name: springboot-jsp
+
+  memory: 512M
+
+  instances: 1
+
+  path: target/hello-springboot.jar
+
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git#v3.3.0
+
+  env:
+
+    SPRING_PROFILES_ACTIVE : cloud
